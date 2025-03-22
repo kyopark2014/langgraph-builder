@@ -60,11 +60,11 @@ langgraph-gen spec.yml -o stub.py --implementation supervisor-agent.py
 
 ## CRAG 구현하기
 
-[CRAG-Corrective RAG](https://github.com/kyopark2014/agentic-rag/blob/main/README.md#corrective-rag)는 RAG의 응답 정확도와 신뢰를 높이는 방법중에 하나 입니다. 먼저 아래와 같이 CRAG를 구성하였습니다.
+[CRAG-Corrective RAG](https://github.com/kyopark2014/agentic-rag/blob/main/README.md#corrective-rag)는 RAG의 응답 정확도와 신뢰를 높이는 방법중에 하나 입니다. [LangGraph Builder](https://build.langchain.com/)에 접속하여 아래와 같이 CRAG를 구성하였습니다. 
 
 <img src="https://github.com/user-attachments/assets/18c11abf-b828-44df-8e2c-f07eaba67c0d" width="400">
 
-LangGraph studio로 확인해보면 아래와 같이 graph가 잘 생성된것을 확인할 수 있습니다.
+LangGraph Builder의 [Generate Code]를 선택하여 "spec.yml", "stub.py", "implementation.py"을 생성한 후에 다운로드 합니다. 이후 "implementation.py"의 마지막 print문을 주석처리하고, langgraph.json 파일을 생성합니다. 이제 LangGraph studio로 graph가 잘 생성된것을 확인할 수 있습니다.
 
 ![image](https://github.com/user-attachments/assets/10b40b83-819d-405f-ba01-f9483f72cb9a)
 
