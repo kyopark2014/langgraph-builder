@@ -14,8 +14,10 @@ LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려�
 
 ### 개발환경 설정
 
+아래와 같이 langgraph-cli을 설치합니다.
+
 ```text
-pyenv virtualenv 3.11.1 application
+pip install 'langgraph-cli[inmem]'
 ```
 
 ## langgraph-gen
