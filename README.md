@@ -65,6 +65,9 @@ langgraph-gen spec.yml -o stub.py --implementation supervisor-agent.py
 ![image](https://github.com/user-attachments/assets/18c11abf-b828-44df-8e2c-f07eaba67c0d)
 
 
+LangGraph studio로 확인해보면 아래와 같이 graph가 잘 생성된것을 확인할 수 있습니다.
+
+![image](https://github.com/user-attachments/assets/10b40b83-819d-405f-ba01-f9483f72cb9a)
 
 
 
