@@ -16,7 +16,7 @@
 
 <img src="https://github.com/user-attachments/assets/bf196f8e-4f43-47d1-9f4b-aba65579cbc6" width="600">
 
-LangGraph Builder에서 아래와 같이 CRAG (Corrective RAG)를 구성하였습니다. [CRAG](https://github.com/kyopark2014/agentic-rag/blob/main/README.md#corrective-rag)는 RAG의 응답 정확도와 신뢰를 높이는 방법중에 하나 입니다.
+LangGraph Builder에서 아래와 같이 CRAG (Corrective RAG)를 구성합니다. [CRAG](https://github.com/kyopark2014/agentic-rag/blob/main/README.md#corrective-rag)는 RAG의 응답 정확도와 신뢰를 높이는 방법중에 하나 입니다.
 
 <img src="https://github.com/user-attachments/assets/18c11abf-b828-44df-8e2c-f07eaba67c0d" width="400">
 
