@@ -18,7 +18,7 @@ LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려�
 
 "implementation.py"에서 아래와 같이 마지막 줄의 invoke를 하는 print문을 주석처리합니다.
 
-![image](https://github.com/user-attachments/assets/5b69dfe7-b641-4558-85b6-0cb7e4060dc4)
+<img src="https://github.com/user-attachments/assets/5b69dfe7-b641-4558-85b6-0cb7e4060dc4" width="600">
 
 이후 아래와 같이 실행합니다.
 
