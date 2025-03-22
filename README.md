@@ -58,7 +58,13 @@ pip install langgraph-gen
 langgraph-gen spec.yml -o stub.py --implementation supervisor-agent.py
 ```
 
-## CRAG 개발하기
+## CRAG 구현하기
+
+[CRAG-Corrective RAG](https://github.com/kyopark2014/agentic-rag/blob/main/README.md#corrective-rag)는 RAG의 응답 정확도와 신뢰를 높이는 방법중에 하나 입니다. 먼저 아래와 같이 CRAG를 구성하였습니다.
+
+![image](https://github.com/user-attachments/assets/18c11abf-b828-44df-8e2c-f07eaba67c0d)
+
+
 
 
 
