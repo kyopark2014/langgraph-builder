@@ -20,13 +20,25 @@ LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려�
 
 <img src="https://github.com/user-attachments/assets/5b69dfe7-b641-4558-85b6-0cb7e4060dc4" width="400">
 
+이제 langgraph.json 파일을 아래와 같이 생성합니다.
+
+```java
+{
+    "dependencies": ["."],
+    "graphs": {
+      "agent": "implementation:compiled_agent"
+    },
+    "env": ".env"
+  }
+```
+
 이후 아래와 같이 실행합니다.
 
 ```text
 langgraph dev
 ```
 
-이때의 결과는 아래와 같습니다. 
+생성된 LangGraph Agent Graph는 아래와 같습니다.
 
 <img src="https://github.com/user-attachments/assets/ad220386-066b-43ab-ab56-1c25d2b23f8e" width="600">
 
