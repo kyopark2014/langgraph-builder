@@ -14,7 +14,7 @@ LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려�
 
 LangGraph Builder의 [Generate Code]를 선택하여 "spec.yml", "stub.py", "implementation.py"을 생성한 후에 다운로드 합니다. 이후 "implementation.py"의 마지막 print문을 주석처리합니다.
 
-<img src="https://github.com/user-attachments/assets/5b69dfe7-b641-4558-85b6-0cb7e4060dc4" width="400">
+<img src="https://github.com/user-attachments/assets/1c8f048d-03e9-47fa-84fd-d8cbbe6984b0" width="400">
 
 이제 langgraph.json 파일을 아래와 같이 생성합니다.
 
