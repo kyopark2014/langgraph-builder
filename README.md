@@ -205,7 +205,7 @@ streamlit run application/app.py
 
 <img src="https://github.com/user-attachments/assets/2648c666-4e79-4a05-bdfb-02079e5436da" width="700">
 
-아래 아래와 검색하면 RAG와 인터넷 검색을 통해 아래와 같은 결과를 얻습니다.
+이후 아래와 같이 질문을하면 RAG와 인터넷 검색을 통해 적절한 결과를 얻을 수 있습니다.
 
 <img src="https://github.com/user-attachments/assets/069af2bf-ec9f-48b2-af24-a7ce4932d194" width="400">
 
