@@ -72,7 +72,7 @@ def load_config():
 
     except Exception:
         print("use local configuration")
-        with open("crag/config.json", "r", encoding="utf-8") as f:
+        with open("application/config.json", "r", encoding="utf-8") as f:
             config = json.load(f)
     
     return config

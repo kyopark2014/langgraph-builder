@@ -187,7 +187,7 @@ def get_rewrite():
 
         question: str = Field(description="The new question is optimized to represent semantic intent and meaning of the user")
     
-    llm = chat.get_chat(extended_thinking="Disable")
+    llm = get_chat(extended_thinking="Disable")
     structured_llm_rewriter = llm.with_structured_output(RewriteQuestion)
     
     system = """당신은 질문 re-writer입니다. 사용자의 의도와 의미을 잘 표현할 수 있도록 질문을 한국어로 re-write하세요."""
@@ -208,7 +208,7 @@ class GradeDocuments(BaseModel):
 
     binary_score: str = Field(description="Documents are relevant to the question, 'yes' or 'no'")
 
-def get_retrieval_grader(chat):
+def get_retrieval_grader(llm):
     system = """You are a grader assessing relevance of a retrieved document to a user question. \n 
     If the document contains keyword(s) or semantic meaning related to the question, grade it as relevant. \n
     Give a binary score 'yes' or 'no' score to indicate whether the document is relevant to the question."""
@@ -220,7 +220,7 @@ def get_retrieval_grader(chat):
         ]
     )
     
-    structured_llm_grader = chat.with_structured_output(GradeDocuments)
+    structured_llm_grader = llm.with_structured_output(GradeDocuments)
     retrieval_grader = grade_prompt | structured_llm_grader
     return retrieval_grader
 

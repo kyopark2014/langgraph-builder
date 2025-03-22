@@ -85,7 +85,6 @@ def websearch(state: State) -> dict:
     documents = state["documents"]
     
     docs = search.retrieve_documents_from_tavily(question, top_k=3)
-    # print('docs: ', docs)
 
     for doc in docs:
         documents.append(doc)
