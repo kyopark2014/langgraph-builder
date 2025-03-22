@@ -28,7 +28,7 @@ langgraph dev
 
 이때의 결과는 아래와 같습니다. 
 
-![image](https://github.com/user-attachments/assets/ad220386-066b-43ab-ab56-1c25d2b23f8e)
+<img src="https://github.com/user-attachments/assets/ad220386-066b-43ab-ab56-1c25d2b23f8e" width="400">
 
 
 ### 개발환경 설정
