@@ -68,7 +68,13 @@ LangGraph Builder의 [Generate Code]를 선택하여 "spec.yml", "stub.py", "imp
 
 ![image](https://github.com/user-attachments/assets/10b40b83-819d-405f-ba01-f9483f72cb9a)
 
+아래 명령어로 crag.py 파일을 생성합니다.
 
+```text
+langgraph-gen spec.yml -o stub.py --implementation crag.py
+```
+
+이제 crag.py에 관련 함수들을 연결하여 실행을 준비합니다.
 
 ## Reference 
 
