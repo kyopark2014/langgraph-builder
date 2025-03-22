@@ -12,22 +12,16 @@
 
 name: CustomAgent
 nodes:
-  - name: retrieve
-  - name: grade_documents
-  - name: generate
-  - name: rewrite
-  - name: websearch
+  - name: Supervisor
+  - name: RAG
+  - name: Websearch
 edges:
   - from: __start__
-    to: retrieve
-  - from: generate
-    to: __end__
-  - from: retrieve
-    to: grade_documents
-  - from: rewrite
-    to: websearch
-  - from: websearch
-    to: generate
-  - from: grade_documents
+    to: Supervisor
+  - from: RAG
+    to: Supervisor
+  - from: Websearch
+    to: Supervisor
+  - from: Supervisor
     condition: conditional_edge_1
-    paths: [generate, rewrite]
+    paths: [RAG, Websearch, __end__]

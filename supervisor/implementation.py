@@ -16,36 +16,22 @@ class SomeState(TypedDict):
 
 
 # Define stand-alone functions
-def retrieve(state: SomeState) -> dict:
-    print("In node: retrieve")
+def Supervisor(state: SomeState) -> dict:
+    print("In node: Supervisor")
     return {
         # Add your state update logic here
     }
 
 
-def grade_documents(state: SomeState) -> dict:
-    print("In node: grade_documents")
+def RAG(state: SomeState) -> dict:
+    print("In node: RAG")
     return {
         # Add your state update logic here
     }
 
 
-def generate(state: SomeState) -> dict:
-    print("In node: generate")
-    return {
-        # Add your state update logic here
-    }
-
-
-def rewrite(state: SomeState) -> dict:
-    print("In node: rewrite")
-    return {
-        # Add your state update logic here
-    }
-
-
-def websearch(state: SomeState) -> dict:
-    print("In node: websearch")
+def Websearch(state: SomeState) -> dict:
+    print("In node: Websearch")
     return {
         # Add your state update logic here
     }
@@ -59,11 +45,9 @@ def conditional_edge_1(state: SomeState) -> str:
 agent = CustomAgent(
     state_schema=SomeState,
     impl=[
-        ("retrieve", retrieve),
-        ("grade_documents", grade_documents),
-        ("generate", generate),
-        ("rewrite", rewrite),
-        ("websearch", websearch),
+        ("Supervisor", Supervisor),
+        ("RAG", RAG),
+        ("Websearch", Websearch),
         ("conditional_edge_1", conditional_edge_1),
     ],
 )
