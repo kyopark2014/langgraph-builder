@@ -1,6 +1,18 @@
 # LangGraph Builder로 Agent 개발하기
 
-LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려운 일입니다. 이를 위해 LangGraph에서 나온 LangGraph Builder에 대해 소개합니다. LangGraph에서는 No code 툴로 포지셔닝하고 있지만, 제 생각에는 LangGraph 경험이 있는 사람들이 편리하게 사용할 수 있을것 같습니다.
+<p align="left">
+    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fkyopark2014%2Fagentic-builder&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false")](https://hits.seeyoufarm.com"/></a>
+    <img alt="License" src="https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square">
+</p>
+
+
+저의 경우에는 LangGraph에 경혐이 꽤 쌓일때까지 graph diagram을 그리는것이 매우 어려운 일이었습니다. 이후 LangGraph Studio가 나왔지만 여전히 어려웠는데, 이번에 LangGraph Builder가 나옴으로 해서 
+
+
+LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려운 일입니다. 
+
+
+이를 위해 LangGraph에서 나온 LangGraph Builder에 대해 소개합니다. LangGraph에서는 No code 툴로 포지셔닝하고 있지만, 제 생각에는 LangGraph 경험이 있는 사람들이 편리하게 사용할 수 있을것 같습니다.
 
 ## CRAG 구현하기
 
