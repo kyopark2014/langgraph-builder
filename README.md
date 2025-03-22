@@ -6,7 +6,7 @@
 </p>
 
 
-저의 경우에는 LangGraph에 경혐이 꽤 쌓일때까지 graph diagram을 그리는것이 매우 어려운 일이었습니다. 이후 LangGraph Studio가 나왔지만 여전히 어려웠는데요. 이번에 다시 [LangGraph Builder](https://github.com/langchain-ai/langgraph-builder)가 나옮으로 해서 이런 어려움을 상당부분 해소가 될것 같습니다. 여기에서는 [LangGraph Builder](https://build.langchain.com/)를 이용해 CRAG (Corrective RAG)를 지원하는 agent를 생성하는 방법에 대해 설명합니다. LangGraph에서는 No code 툴로 포지셔닝하고 있지만, 제 생각에는 LangGraph 경험이 있는 사람들이 더 편리하게 사용할 수 있을것 같습니다.
+저의 경우에는 LangGraph에 경혐이 꽤 쌓일때까지 graph diagram을 그리는것이 매우 어려운 일이었습니다. 이후 LangGraph Studio가 나왔지만 여전히 어려웠는데요. 이번에 다시 [LangGraph Builder](https://github.com/langchain-ai/langgraph-builder)가 나옮으로 해서 이런 어려움이 상당부분 해소가 될것 같습니다. 여기에서는 [LangGraph Builder](https://build.langchain.com/)를 이용해 CRAG (Corrective RAG)를 지원하는 agent를 생성하는 방법에 대해 설명합니다. LangGraph에서는 No code 툴로 포지셔닝하고 있지만, 제 생각에는 LangGraph 경험이 있는 사람들이 더 편리하게 사용할 수 있을것 같습니다.
 
 ## LangGraph Builder 활용하기
 
