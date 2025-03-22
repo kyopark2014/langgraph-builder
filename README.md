@@ -8,7 +8,9 @@
 
 저의 경우에는 LangGraph에 경혐이 꽤 쌓일때까지 graph diagram을 그리는것이 매우 어려운 일이었습니다. 이후 LangGraph Studio가 나왔지만 여전히 어려웠는데요. 이번에 다시 [LangGraph Builder](https://github.com/langchain-ai/langgraph-builder)가 나옮으로 해서 이런 어려움을 상당부분 해소가 될것 같습니다. 여기에서는 [LangGraph Builder](https://build.langchain.com/)를 이용해 CRAG (Corrective RAG)를 지원하는 agent를 생성하는 방법에 대해 설명합니다. LangGraph에서는 No code 툴로 포지셔닝하고 있지만, 제 생각에는 LangGraph 경험이 있는 사람들이 더 편리하게 사용할 수 있을것 같습니다.
 
-## CRAG 구현하기
+## LangGraph Builder 활용하기
+
+### CRAG를 위한 Graph Diagram 생성하기
 
 [LangGraph Builder](https://build.langchain.com/)에 접속합니다. 
 
@@ -50,9 +52,9 @@ langgraph dev
 
 이제 LangGraph studio로 graph가 잘 생성된것을 확인할 수 있습니다.
 
-
 ![image](https://github.com/user-attachments/assets/10b40b83-819d-405f-ba01-f9483f72cb9a)
 
+### CRAG 구현하기
 
 [langgraph-gen](https://github.com/langchain-ai/langgraph-gen-py)는 LangGraph CLI로서 LangGraph stub를 생성할 수 있습니다. 아래와 같이 langgraph-gen을 설치합니다. 
 
@@ -66,7 +68,7 @@ pip install langgraph-gen
 langgraph-gen spec.yml -o stub.py --implementation crag.py
 ```
 
-[Corrective RAG](https://github.com/kyopark2014/agentic-rag?tab=readme-ov-file#corrective-rag)을 참조하여 [crag.py](./application/crag.py)을 수정합니다.
+[Corrective RAG](https://github.com/kyopark2014/agentic-rag?tab=readme-ov-file#corrective-rag)을 참조하여 [crag.py](./application/crag.py)을 수정합니다. 상세한 내용은 아래를 참조합니다. 
 
 CRAG를 위한 State를 정의합니다.
 
