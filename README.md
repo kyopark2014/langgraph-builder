@@ -62,8 +62,7 @@ langgraph-gen spec.yml -o stub.py --implementation supervisor-agent.py
 
 [CRAG-Corrective RAG](https://github.com/kyopark2014/agentic-rag/blob/main/README.md#corrective-rag)는 RAG의 응답 정확도와 신뢰를 높이는 방법중에 하나 입니다. 먼저 아래와 같이 CRAG를 구성하였습니다.
 
-![image](https://github.com/user-attachments/assets/18c11abf-b828-44df-8e2c-f07eaba67c0d)
-
+<img src="https://github.com/user-attachments/assets/18c11abf-b828-44df-8e2c-f07eaba67c0d" width="400">
 
 LangGraph studio로 확인해보면 아래와 같이 graph가 잘 생성된것을 확인할 수 있습니다.
 
