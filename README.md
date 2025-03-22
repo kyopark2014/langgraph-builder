@@ -26,12 +26,14 @@ LangGraph Builder의 [Generate Code]를 선택하여 "spec.yml", "stub.py", "imp
 
 ```java
 {
-    "dependencies": ["."],
-    "graphs": {
-      "agent": "implementation:compiled_agent"
-    },
-    "env": ".env"
-  }
+   "dependencies":[
+      "."
+   ],
+   "graphs":{
+      "agent":"implementation:compiled_agent"
+   },
+   "env":".env"
+}
 ```
 
 아래와 같이 langgraph-cli을 설치합니다. 이렇게 하면 LangGraph Studio를 이용할 수 있습니다.
