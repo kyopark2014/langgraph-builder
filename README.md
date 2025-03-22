@@ -8,7 +8,7 @@ LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려�
 
 <img src="https://github.com/user-attachments/assets/bf196f8e-4f43-47d1-9f4b-aba65579cbc6" width="600">
 
-
+그래프를 그리고 나서 생성을 하면 "spec.yml", "stub.py", "implementation.py" 파일이 생성됩니다.
 
 ## langgraph-gen
 
