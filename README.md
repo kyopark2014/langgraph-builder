@@ -195,6 +195,10 @@ streamlit run application/app.py
 
 ![image](https://github.com/user-attachments/assets/2648c666-4e79-4a05-bdfb-02079e5436da)
 
+아래 아래와 검색하면 RAG와 인터넷 검색을 통해 아래와 같은 결과를 얻습니다.
+
+![image](https://github.com/user-attachments/assets/069af2bf-ec9f-48b2-af24-a7ce4932d194)
+
 
 ## Reference 
 
