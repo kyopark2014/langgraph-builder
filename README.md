@@ -28,8 +28,6 @@ LangGraph Builder의 [Generate Code]를 선택하여 "spec.yml", "stub.py", "imp
   }
 ```
 
-이제 crag.py에 관련 함수들을 연결하여 실행을 준비합니다.
-
 아래와 같이 langgraph-cli을 설치합니다. 이렇게 하면 LangGraph Studio를 이용할 수 있습니다.
 
 ```text
