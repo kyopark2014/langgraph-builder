@@ -127,7 +127,7 @@ def websearch(state: State) -> dict:
     return {"question": question, "documents": documents}
 ```
 
-문서가 충분히 모이면 생성합니다.
+검색된 문서를 가지고 답변을 생성합니다.
 
 ```python
 def generate(state: State) -> dict:
