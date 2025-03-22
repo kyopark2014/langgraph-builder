@@ -14,7 +14,8 @@ LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려�
 
 ### 개발환경 설정
 
-아래와 같이 langgraph-cli을 설치합니다.
+아래와 같이 langgraph-cli을 설치합니다. 이렇게 하면 LangGraph Studio를 이용할 수 있습니다.
+
 
 ```text
 pip install 'langgraph-cli[inmem]'
