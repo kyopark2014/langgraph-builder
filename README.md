@@ -32,6 +32,12 @@ LangGraph로 Agent 설계시 Graph drawing은 아무래도 복잡하고 어려�
   }
 ```
 
+아래와 같이 langgraph-cli을 설치합니다. 이렇게 하면 LangGraph Studio를 이용할 수 있습니다.
+
+```text
+pip install 'langgraph-cli[inmem]'
+```
+
 이후 아래와 같이 실행합니다.
 
 ```text
@@ -42,29 +48,16 @@ langgraph dev
 
 <img src="https://github.com/user-attachments/assets/ad220386-066b-43ab-ab56-1c25d2b23f8e" width="600">
 
-
-### 개발환경 설정
-
-아래와 같이 langgraph-cli을 설치합니다. 이렇게 하면 LangGraph Studio를 이용할 수 있습니다.
-
-```text
-pip install 'langgraph-cli[inmem]'
-```
-
-compiled_agent
-
-## langgraph-gen
-
 [langgraph-gen](https://github.com/langchain-ai/langgraph-gen-py)는 LangGraph CLI로서 LangGraph stub를 생성할 수 있습니다. 아래와 같이 langgraph-gen을 설치합니다. 
 
 ```text
 pip install langgraph-gen
 ```
 
-실제 사용은 아래와 같습니다.
+아래와 같이 실행하면 supervisor-agent.py를 생성하여 활용할 수 있습니다.
 
 ```text
-langgraph-gen spec.yml -o custom_output.py --implementation custom_impl.py
+langgraph-gen spec.yml -o stub.py --implementation supervisor-agent.py
 ```
 
 ## Reference 
