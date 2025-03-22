@@ -58,6 +58,142 @@ pip install langgraph-gen
 langgraph-gen spec.yml -o stub.py --implementation crag.py
 ```
 
+[Corrective RAG](https://github.com/kyopark2014/agentic-rag?tab=readme-ov-file#corrective-rag)을 참조하여 [crag.py](./application/crag.py)을 수정합니다.
+
+CRAG를 위한 State를 정의합니다.
+
+```python
+class State(TypedDict):
+    question : str
+    generation : str
+    web_search : str
+    documents : List[str]
+```
+
+Retrieve Node는 아래와 같습니다. 여기에서는 OpenSearch를 이용해 RAG를 구성하였고, 4개의 관련된 문서를 가져와서 활용합니다.
+
+```python
+def retrieve(state: State) -> dict:
+    logger.info(f"###### retrieve ######")
+    
+    question = state["question"]
+
+    documents = rag.retrieve_documents_from_opensearch(question, top_k=4)
+    
+    return {"documents": documents}
+```
+
+가져온 문서는 grade_documents에서 평가를 수행합니다.
+
+```python
+def grade_documents(state: State) -> dict:
+    logger.info(f"###### grade_documents ######")
+
+    filtered_docs = chat.grade_documents_using_llm(state["question"], state["documents"])
+
+    web_search = "yes" if len(filtered_docs) < len(state["documents"]) else "no"
+
+    return {"documents": filtered_docs, "web_search": web_search}
+```
+
+추가로 문서를 검색할 때에는 먼저 질문을 rewrite합니다.
+
+```python
+def rewrite(state: State) -> dict:
+    logger.info(f"###### rewrite ######")
+    question = state["question"]
+    documents = state["documents"]
+    
+    question_rewriter = chat.get_rewrite()
+    
+    better_question = question_rewriter.invoke({"question": question})
+
+    return {"question": better_question.question, "documents": documents}
+```
+
+인터넷 검색을 위한 websearch 노드는 아래와 같습니다.
+
+```python
+def websearch(state: State) -> dict:
+    logger.info(f"###### web_search ######")
+    question = state["question"]
+    documents = state["documents"]
+    
+    docs = search.retrieve_documents_from_tavily(question, top_k=3)
+
+    for doc in docs:
+        documents.append(doc)
+        
+    return {"question": question, "documents": documents}
+```
+
+문서가 충분히 모이면 생성합니다.
+
+```python
+def generate(state: State) -> dict:
+    logger.info(f"###### generate ######")
+    question = state["question"]
+    documents = state["documents"]
+
+    rag_chain = chat.get_rag_prompt(question)
+    relevant_context = ""
+    for document in documents:
+        relevant_context = relevant_context + document.page_content + "\n\n"    
+    
+    result = rag_chain.invoke(
+        {
+            "question": question, 
+            "context": relevant_context
+        }
+    )
+    
+    output = result.content
+    if output.find('<result>')!=-1:
+        output = output[output.find('<result>')+8:output.find('</result>')]
+        
+    return {"generation": output}
+```
+
+Conditional edge는 아래와 같습니다.
+
+```python
+def conditional_edge(state: State) -> str:
+    logger.info(f"###### decide_to_generate ######")
+    web_search = state["web_search"]
+    
+    if web_search == "yes":
+        return "rewrite"
+    else:
+        return "generate"
+```
+
+CRAG는 아래와 같이 실행합니다.
+
+```python
+def run_crag(question):
+    inputs = {"question": question}    
+    config = {
+        "recursion_limit": 50
+    }
+
+    for output in compiled_agent.stream(inputs, config):   
+        for key, value in output.items():
+            logger.info(f"Finished running: {key}")
+
+    return value["generation"]
+```
+
+### 실행하기
+
+아래와 같이 streamlit을 실행합니다.
+
+```python
+streamlit run application/app.py
+```
+
+아래와 같이 Corrective RAG를 실행할 수 있습니다.
+
+![image](https://github.com/user-attachments/assets/2648c666-4e79-4a05-bdfb-02079e5436da)
 
 
 ## Reference 
