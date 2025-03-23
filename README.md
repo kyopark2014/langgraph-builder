@@ -18,8 +18,6 @@
 
 LangGraph Builder에서 아래와 같이 CRAG (Corrective RAG)를 구성합니다. [CRAG](https://github.com/kyopark2014/agentic-rag/blob/main/README.md#corrective-rag)는 RAG의 응답 정확도와 신뢰를 높이는 방법중에 하나 입니다.
 
-<img src="https://github.com/user-attachments/assets/18c11abf-b828-44df-8e2c-f07eaba67c0d" width="400">
-
 <img src="https://github.com/user-attachments/assets/67be90cf-7296-4381-a30c-d92b7c2638a5" width="400">
 
 LangGraph Builder의 [Generate Code]를 선택하여 "spec.yml", "stub.py", "implementation.py"을 생성한 후에 다운로드 합니다. 이후 "implementation.py"의 마지막 print문을 주석처리합니다.
