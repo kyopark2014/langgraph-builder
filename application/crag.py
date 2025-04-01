@@ -91,7 +91,7 @@ def websearch(state: State) -> dict:
         
     return {"question": question, "documents": documents}
 
-def conditional_edge(state: State) -> str:
+def decide_to_generate(state: State) -> str:
     logger.info(f"###### decide_to_generate ######")
     web_search = state["web_search"]
     
@@ -110,7 +110,7 @@ agent = Agent(
         ("generate", generate),
         ("rewrite", rewrite),
         ("websearch", websearch),
-        ("conditional_edge", conditional_edge),
+        ("decide_to_generate", decide_to_generate),
     ],
 )
 
