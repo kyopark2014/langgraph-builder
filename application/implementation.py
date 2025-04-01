@@ -7,7 +7,7 @@ Replace the placeholder implementation with your own logic.
 
 from typing_extensions import TypedDict
 
-from stub import CustomAgent
+from stub import Agent
 
 
 class SomeState(TypedDict):
@@ -51,12 +51,12 @@ def websearch(state: SomeState) -> dict:
     }
 
 
-def conditional_edge_1(state: SomeState) -> str:
-    print("In condition: conditional_edge_1")
+def decide_to_generate(state: SomeState) -> str:
+    print("In condition: decide_to_generate")
     raise NotImplementedError("Implement me.")
 
 
-agent = CustomAgent(
+agent = Agent(
     state_schema=SomeState,
     impl=[
         ("retrieve", retrieve),
@@ -64,7 +64,7 @@ agent = CustomAgent(
         ("generate", generate),
         ("rewrite", rewrite),
         ("websearch", websearch),
-        ("conditional_edge_1", conditional_edge_1),
+        ("decide_to_generate", decide_to_generate),
     ],
 )
 

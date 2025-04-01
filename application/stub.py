@@ -27,7 +27,7 @@ def Agent(
         "generate",
         "rewrite",
         "websearch",
-        "conditional_edge",
+        "decide_to_generate",
     }
 
     missing_nodes = expected_implementations - all_names
@@ -56,7 +56,7 @@ def Agent(
     builder.add_edge("websearch", "generate")
     builder.add_conditional_edges(
         "grade_documents",
-        nodes_by_name["conditional_edge"],
+        nodes_by_name["decide_to_generate"],
         [
             "generate",
             "rewrite",

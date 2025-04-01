@@ -10,7 +10,7 @@
 #
 # A placeholder implementation for the generated stub can be found in implementation.py.
 
-name: CustomAgent
+name: Agent
 nodes:
   - name: retrieve
   - name: grade_documents
@@ -29,5 +29,5 @@ edges:
   - from: websearch
     to: generate
   - from: grade_documents
-    condition: conditional_edge_1
+    condition: decide_to_generate
     paths: [generate, rewrite]
